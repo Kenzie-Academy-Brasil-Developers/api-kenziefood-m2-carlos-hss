@@ -6,9 +6,11 @@ class ListProducts {
         const response = await fetch(this.endPoint);
         const dataProducts = await response.json();
 
-        return dataProducts
+        localStorage.clear();
+        localStorage.products = JSON.stringify(dataProducts);
+
     }
 
 }
 
-export { ListProducts }
+ListProducts.consumeApi();
