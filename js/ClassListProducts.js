@@ -6,7 +6,6 @@ class ListProducts {
         const response = await fetch(this.endPoint);
         const dataProducts = await response.json();
 
-        localStorage.clear();
         localStorage.products = JSON.stringify(dataProducts);
 
     }
