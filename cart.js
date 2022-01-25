@@ -64,3 +64,5 @@ class Cart {
     }
 
 }
+
+export { Cart }
