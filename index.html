@@ -19,6 +19,7 @@
 
     <title>Kenzie Food</title>
   </head>
+
   <body>
     <header class="header">
       <div class="container-logo">
@@ -34,39 +35,39 @@
           </figcaption>
         </figure>
       </div>
-    </header>
 
-    <section class="search">
-      <form action="#" class="form-search">
-        <label class="search-label" for="search-product">
-          <input
-            type="text"
-            name="search"
-            class="search-label__input"
-            id="search-product"
-            placeholder="Pesquisar por produto"
-          />
-
-          <button class="search-button" type="button">
-            <img
-              class="search-button__image"
-              src="./public/assets/img/search-icon.svg"
-              alt="Search button"
+      <section class="search">
+        <form action="#" class="form-search">
+          <label class="search-label" for="search-product">
+            <input
+              type="text"
+              name="search"
+              class="search-label__input"
+              id="search-product"
+              placeholder="Pesquisar por produto"
             />
-          </button>
-        </label>
-      </form>
-    </section>
+
+            <button class="search-button" type="button">
+              <img
+                class="search-button__image"
+                src="./public/assets/img/search-icon.svg"
+                alt="Search button"
+              />
+            </button>
+          </label>
+        </form>
+      </section>
+    </header>
 
     <section class="navigation">
       <nav class="container-navigation">
-        <ul class="navigation-list">
+        <ul class="navigation-list flex-row">
           <li class="list-item">
-            <button class="button-menu" type="button">Todos</button>
+            <button class="button-menu active" type="button">Todos</button>
           </li>
 
           <li class="list-item">
-            <button class="button-menu" type="button">
+            <button class="button-menu bread" type="button">
               <img
                 class="button-menu__image"
                 src="./public/assets/img/bread-icon.svg"
@@ -77,7 +78,7 @@
           </li>
 
           <li class="list-item">
-            <button class="button-menu" type="button">
+            <button class="button-menu fruits" type="button">
               <img
                 class="button-menu__image"
                 src="./public/assets/img/fruits-icon.svg"
@@ -88,7 +89,7 @@
           </li>
 
           <li class="list-item">
-            <button class="button-menu" type="button">
+            <button class="button-menu drinks" type="button">
               <img
                 class="button-menu__image"
                 src="./public/assets/img/drinks-icon.svg"
@@ -102,7 +103,7 @@
     </section>
 
     <main class="main">
-      <section class="container-products">
+      <section class="container-products flex-row">
         <div class="product">
           <figure class="product-figure">
             <img
@@ -114,17 +115,26 @@
             <figcaption class="product-figure__figcaption hidden">
               Mousse de morango com pedaços da fruta
             </figcaption>
+
+            <span class="product-section fruits">
+              <img
+                class="product-section__image"
+                src="./public/assets/img/fruits-icon.svg"
+                alt="Fruits section"
+              />
+              Frutas
+            </span>
           </figure>
 
-          <h2 class="product__title">Mousse de morango com a fruta</h2>
+          <h2 class="product__title title1">Mousse de morango com a fruta</h2>
 
-          <p lass="product__description">
+          <p class="product__description caption">
             Sobremesa fácil, rápida e muito saborosa: a mousse de morango leva
             apenas 5 ingredientes; confira como fazer a receita
           </p>
 
-          <div class="container-additional">
-            <span class="container-additional__price">R$ 27,50</span>
+          <div class="container-additional flex-row">
+            <span class="container-additional__price title3">R$ 27,50</span>
 
             <button class="addcart-button" type="button">
               <img
@@ -147,17 +157,26 @@
             <figcaption class="product-figure__figcaption hidden">
               Mousse de morango com pedaços da fruta
             </figcaption>
+
+            <span class="product-section fruits">
+              <img
+                class="product-section__image"
+                src="./public/assets/img/fruits-icon.svg"
+                alt="Fruits section"
+              />
+              Frutas
+            </span>
           </figure>
 
-          <h2 class="product__title">Mousse de morango com a fruta</h2>
+          <h2 class="product__title title1">Mousse de morango com a fruta</h2>
 
-          <p lass="product__description">
+          <p class="product__description caption">
             Sobremesa fácil, rápida e muito saborosa: a mousse de morango leva
             apenas 5 ingredientes; confira como fazer a receita
           </p>
 
-          <div class="container-additional">
-            <span class="container-additional__price">R$ 27,50</span>
+          <div class="container-additional flex-row">
+            <span class="container-additional__price title3">R$ 27,50</span>
 
             <button class="addcart-button" type="button">
               <img
@@ -180,17 +199,26 @@
             <figcaption class="product-figure__figcaption hidden">
               Mousse de morango com pedaços da fruta
             </figcaption>
+
+            <span class="product-section fruits">
+              <img
+                class="product-section__image"
+                src="./public/assets/img/fruits-icon.svg"
+                alt="Fruits section"
+              />
+              Frutas
+            </span>
           </figure>
 
-          <h2 class="product__title">Mousse de morango com a fruta</h2>
+          <h2 class="product__title title1">Mousse de morango com a fruta</h2>
 
-          <p lass="product__description">
+          <p class="product__description caption">
             Sobremesa fácil, rápida e muito saborosa: a mousse de morango leva
             apenas 5 ingredientes; confira como fazer a receita
           </p>
 
-          <div class="container-additional">
-            <span class="container-additional__price">R$ 27,50</span>
+          <div class="container-additional flex-row">
+            <span class="container-additional__price title3">R$ 27,50</span>
 
             <button class="addcart-button" type="button">
               <img
@@ -213,17 +241,26 @@
             <figcaption class="product-figure__figcaption hidden">
               Mousse de morango com pedaços da fruta
             </figcaption>
+
+            <span class="product-section fruits">
+              <img
+                class="product-section__image"
+                src="./public/assets/img/fruits-icon.svg"
+                alt="Fruits section"
+              />
+              Frutas
+            </span>
           </figure>
 
-          <h2 class="product__title">Mousse de morango com a fruta</h2>
+          <h2 class="product__title title1">Mousse de morango com a fruta</h2>
 
-          <p lass="product__description">
+          <p class="product__description caption">
             Sobremesa fácil, rápida e muito saborosa: a mousse de morango leva
             apenas 5 ingredientes; confira como fazer a receita
           </p>
 
-          <div class="container-additional">
-            <span class="container-additional__price">R$ 27,50</span>
+          <div class="container-additional flex-row">
+            <span class="container-additional__price title3">R$ 27,50</span>
 
             <button class="addcart-button" type="button">
               <img
@@ -246,17 +283,26 @@
             <figcaption class="product-figure__figcaption hidden">
               Mousse de morango com pedaços da fruta
             </figcaption>
+
+            <span class="product-section fruits">
+              <img
+                class="product-section__image"
+                src="./public/assets/img/fruits-icon.svg"
+                alt="Fruits section"
+              />
+              Frutas
+            </span>
           </figure>
 
-          <h2 class="product__title">Mousse de morango com a fruta</h2>
+          <h2 class="product__title title1">Mousse de morango com a fruta</h2>
 
-          <p lass="product__description">
+          <p class="product__description caption">
             Sobremesa fácil, rápida e muito saborosa: a mousse de morango leva
             apenas 5 ingredientes; confira como fazer a receita
           </p>
 
-          <div class="container-additional">
-            <span class="container-additional__price">R$ 27,50</span>
+          <div class="container-additional flex-row">
+            <span class="container-additional__price title3">R$ 27,50</span>
 
             <button class="addcart-button" type="button">
               <img
@@ -279,50 +325,26 @@
             <figcaption class="product-figure__figcaption hidden">
               Mousse de morango com pedaços da fruta
             </figcaption>
-          </figure>
 
-          <h2 class="product__title">Mousse de morango com a fruta</h2>
-
-          <p lass="product__description">
-            Sobremesa fácil, rápida e muito saborosa: a mousse de morango leva
-            apenas 5 ingredientes; confira como fazer a receita
-          </p>
-
-          <div class="container-additional">
-            <span class="container-additional__price">R$ 27,50</span>
-
-            <button class="addcart-button" type="button">
+            <span class="product-section fruits">
               <img
-                class="addcart-button__image"
-                src="./public/assets/img/add-cart-icon.svg"
-                alt="Add cart button"
+                class="product-section__image"
+                src="./public/assets/img/fruits-icon.svg"
+                alt="Fruits section"
               />
-            </button>
-          </div>
-        </div>
-
-        <div class="product">
-          <figure class="product-figure">
-            <img
-              class="product-figure__image"
-              src="./public/assets/img/product-demo.png"
-              alt="Mousse de morango"
-            />
-
-            <figcaption class="product-figure__figcaption hidden">
-              Mousse de morango com pedaços da fruta
-            </figcaption>
+              Frutas
+            </span>
           </figure>
 
-          <h2 class="product__title">Mousse de morango com a fruta</h2>
+          <h2 class="product__title title1">Mousse de morango com a fruta</h2>
 
-          <p lass="product__description">
+          <p class="product__description caption">
             Sobremesa fácil, rápida e muito saborosa: a mousse de morango leva
             apenas 5 ingredientes; confira como fazer a receita
           </p>
 
-          <div class="container-additional">
-            <span class="container-additional__price">R$ 27,50</span>
+          <div class="container-additional flex-row">
+            <span class="container-additional__price title3">R$ 27,50</span>
 
             <button class="addcart-button" type="button">
               <img
@@ -336,7 +358,7 @@
       </section>
 
       <aside class="container-cart">
-        <header class="cart-header">
+        <header class="cart-header flex-row">
           <img
             class="cart-header__image"
             src="./public/assets/img/cart-icon.svg"
@@ -346,8 +368,22 @@
           <h2 class="cart-header__title">Carrinho</h2>
         </header>
 
-        <section class="cart-body">
-          <div class="cart-product">
+        <section class="cart-body empty flex-col">
+          <div class="empty-cart flex-col">
+            <img
+              class="empty-cart_image"
+              src="./public/assets/img/shopping-bag.svg"
+              alt="Shopping bag"
+            />
+
+            <span class="empty-cart_span">Ops!</span>
+
+            <p class="empty-cart_paragraph">
+              Por enquanto não temos produtos no carrinho
+            </p>
+          </div>
+
+          <!-- <div class="cart-product flex-row">
             <figure class="cart-figure">
               <img
                 class="cart-figure__image"
@@ -360,14 +396,14 @@
               </figcaption>
             </figure>
 
-            <div class="container-information">
-              <h2 class="container-information_title">
+            <div class="container-information flex-col">
+              <h2 class="container-information_title title2">
                 Mousse de morango com a fruta
               </h2>
 
-              <span class="container-information__section">Frutas</span>
+              <span class="container-information__section detail">Frutas</span>
 
-              <span class="container-informatio__price">R$ 27,50</span>
+              <span class="container-information__price caption">R$ 27,50</span>
             </div>
 
             <div class="container-remove">
@@ -375,17 +411,35 @@
                 <img
                   class="remove-button__image"
                   src="./public/assets/img/remove-product-icon.svg"
-                  alt="Remove from cart button"
+                  alt="Remove produc"
                 />
               </button>
             </div>
-          </div>
+          </div> -->
         </section>
+
+        <footer class="cart-footer hidden">
+          <div class="container-quantity flex-row">
+            <span class="container-quantity__quantity title3">
+              Quantidade
+            </span>
+
+            <span class="container-quantity__total-quantity title3"> 0 </span>
+          </div>
+
+          <div class="container-price flex-row">
+            <span class="container-price__price title3"> Total </span>
+
+            <span class="container-price__total-price title3"> R$ 85,00 </span>
+          </div>
+        </footer>
       </aside>
     </main>
 
     <footer class="footer"></footer>
 
+    <!-- SCRIPTS -->
     <script type="module" src="./src/index.js"></script>
+    <!-- SCRIPTS -->
   </body>
 </html>
