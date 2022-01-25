@@ -12,4 +12,4 @@ class ListProducts {
 
 }
 
-ListProducts.consumeApi();
+export { ListProducts }

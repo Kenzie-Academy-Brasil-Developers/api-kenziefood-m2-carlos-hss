@@ -1,7 +1,7 @@
 class CreateListProduct {
 
     static
-    createTemplateProduct({ imagem, categoria, nome, descricao, preco }) {
+        createTemplateProduct({ imagem, categoria, nome, descricao, preco }) {
 
         const section = document.querySelector(".container-products");
 
@@ -50,3 +50,5 @@ class CreateListProduct {
     }
 
 }
+
+export { CreateListProduct }
