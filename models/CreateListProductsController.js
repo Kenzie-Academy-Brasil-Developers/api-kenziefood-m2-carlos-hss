@@ -18,7 +18,7 @@ class CreateListProduct {
         divCard.className = "product__card";
         figure.className = "product-figure";
 
-        figcaption.classList = "product-figure__figcaption hidden";
+        figcaption.classList.add("product-figure__figcaption hidden");
         figcaption.innerText = nome;
 
         img.className = "product-figure__image";
@@ -28,7 +28,7 @@ class CreateListProduct {
         nameH2.className = "product__title";
         nameH2.innerText = nome;
 
-        category.classList = "product-section hidden";
+        category.classList.add("product-section hidden");
         category.innerText = categoria;
 
         description.className = "product__description";
