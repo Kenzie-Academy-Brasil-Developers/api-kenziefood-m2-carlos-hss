@@ -46,8 +46,15 @@ class Filter {
   }
 
   static buttonAll(evt) {
+    const section = document.querySelector(".container-products");
     const array = JSON.parse(localStorage.getItem("products"));
 
+    section.innerHTML = "";
+
+    array.forEach((value) => {
+      CreateListProduct.createTemplateProduct(value);
+    })
+    
     Filter.toggleActive(evt.target);
   }
 
