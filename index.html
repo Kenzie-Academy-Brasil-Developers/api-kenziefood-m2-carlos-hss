@@ -67,13 +67,13 @@
     </header>
 
     <section class="navigation">
-      <nav class="container-navigation">
+      <nav>
         <ul class="navigation-list flex-row">
-          <li class="list-item">
+          <li>
             <button class="button-menu active" type="button">Todos</button>
           </li>
 
-          <li class="list-item">
+          <li>
             <button class="button-menu panificadora" type="button">
               <img
                 class="button-menu__image"
@@ -84,7 +84,7 @@
             </button>
           </li>
 
-          <li class="list-item">
+          <li>
             <button class="button-menu frutas" type="button">
               <img
                 class="button-menu__image"
@@ -95,7 +95,7 @@
             </button>
           </li>
 
-          <li class="list-item">
+          <li>
             <button class="button-menu drinks" type="button">
               <img
                 class="button-menu__image"
@@ -106,14 +106,14 @@
             </button>
           </li>
 
-          <li class="list-item">
+          <li>
             <button class="button-menu" type="button">
               <span class="fas fa-dollar-sign button-menu__image"></span>
               Menor Preço
             </button>
           </li>
 
-          <li class="list-item">
+          <li>
             <button class="button-menu" type="button">
               <span class="fas fa-dollar-sign"></span>
               <span class="fas fa-dollar-sign"></span>
@@ -128,83 +128,53 @@
     <main class="main">
       <section class="container-products flex-row"></section>
 
-      <aside class="container-cart">
-        <header class="cart-header flex-row">
-          <img
-            class="cart-header__image"
-            src="./public/assets/img/cart-icon.svg"
-            alt="Cart area"
-          />
-
-          <h2 class="cart-header__title">Carrinho</h2>
-        </header>
-
-        <section class="cart-body empty flex-col">
-          <div class="empty-cart flex-col">
+      <div>
+        <aside class="container-cart">
+          <header class="cart-header flex-row">
             <img
-              class="empty-cart_image"
-              src="./public/assets/img/shopping-bag.svg"
-              alt="Shopping bag"
+              class="cart-header__image"
+              src="./public/assets/img/cart-icon.svg"
+              alt="Cart area"
             />
 
-            <span class="empty-cart_span">Ops!</span>
+            <h2 class="cart-header__title">Carrinho</h2>
+          </header>
 
-            <p class="empty-cart_paragraph">
-              Por enquanto não temos produtos no carrinho
-            </p>
-          </div>
-
-          <!-- <div class="cart-product flex-row">
-            <figure class="cart-figure">
+          <section class="cart-body empty flex-col">
+            <div class="empty-cart flex-col">
               <img
-                class="cart-figure__image"
-                src="./public/assets/img/product-demo.png"
-                alt="Mousse de morango"
+                class="empty-cart_image"
+                src="./public/assets/img/shopping-bag.svg"
+                alt="Shopping bag"
               />
 
-              <figcaption class="cart-figure__figcaption hidden">
-                Mousse de morango com pedaços da fruta
-              </figcaption>
-            </figure>
+              <span class="empty-cart_span">Ops!</span>
 
-            <div class="container-information flex-col">
-              <h2 class="container-information_title title2">
-                Mousse de morango com a fruta
-              </h2>
+              <p class="empty-cart_paragraph">
+                Por enquanto não temos produtos no carrinho
+              </p>
+            </div>
+          </section>
 
-              <span class="container-information__section detail">Frutas</span>
+          <footer class="cart-footer hidden">
+            <div class="container-quantity flex-row">
+              <span class="container-quantity__quantity title3">
+                Quantidade
+              </span>
 
-              <span class="container-information__price caption">R$ 27,50</span>
+              <span class="container-quantity__total-quantity title3"> 0 </span>
             </div>
 
-            <div class="container-remove">
-              <button class="remove-button" type="button">
-                <img
-                  class="remove-button__image"
-                  src="./public/assets/img/remove-product-icon.svg"
-                  alt="Remove produc"
-                />
-              </button>
+            <div class="container-price flex-row">
+              <span class="container-price__price title3"> Total </span>
+
+              <span class="container-price__total-price title3">
+                R$ 85,00
+              </span>
             </div>
-          </div> -->
-        </section>
-
-        <footer class="cart-footer hidden">
-          <div class="container-quantity flex-row">
-            <span class="container-quantity__quantity title3">
-              Quantidade
-            </span>
-
-            <span class="container-quantity__total-quantity title3"> 0 </span>
-          </div>
-
-          <div class="container-price flex-row">
-            <span class="container-price__price title3"> Total </span>
-
-            <span class="container-price__total-price title3"> R$ 85,00 </span>
-          </div>
-        </footer>
-      </aside>
+          </footer>
+        </aside>
+      </div>
     </main>
 
     <footer class="footer"></footer>
