@@ -7,7 +7,16 @@ import { ListProducts } from "./controllers/ListProductsController.js";
 
 // START APPLICATION
 const products = JSON.parse(localStorage.getItem("products"));
-localStorage.setItem('cart', JSON.stringify([]));
+if (JSON.parse(localStorage.getItem("cart")).length >= 1) {
+    const sectionCart = document.querySelector(".cart-body")
+    sectionCart.innerHTML = '';
+    for (const i in JSON.parse(localStorage.cart)) {
+        Cart.cartModel(i)
+    };
+} else {
+    localStorage.setItem('cart', JSON.stringify([]));
+}
+
 ListProducts.consumeApi();
 
 products.forEach((product) => {
