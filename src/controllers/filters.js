@@ -1,14 +1,19 @@
-import { ListProducts } from "./ListProductsController.js";
+import { CreateListProduct } from "./CreateListProductsController.js";
 
 class Filter {
   static byButton(evt) {
     const array = JSON.parse(localStorage.products);
+    const section = document.querySelector(".container-products");
 
     const filteredArray = array.filter(
       (value) => value.categoria === evt.target.innerText
     );
 
-    localStorage.filteredProducts = JSON.stringify(filteredArray);
+    section.innerHTML = "";
+
+    filteredArray.forEach((product) => {
+      CreateListProduct.createTemplateProduct(product);
+    });
   }
 
   static byInput(evt) {
@@ -28,21 +33,24 @@ class Filter {
   }
 
   static buttonAll() {
-    ListProducts.consumeApi();
+    const array = JSON.parse(localStorage.getItem("products"));
   }
 
-  static byPriceToHigh() {
-    let local = JSON.parse(localStorage.getItem("products"));
-    local = local.sort((a, b) => a.preco - b.preco);
+  static byHigherPrice() {
+    const array = JSON.parse(localStorage.getItem("products"));
 
-    localStorage.products = JSON.stringify(local);
+    const sortedArray = [...array].sort((a, b) => b.preco - a.preco);
+
+    localStorage.sortedProducts = JSON.stringify(sortedArray);
   }
 
-  static byPriceToLower() {
-    let local = JSON.parse(localStorage.getItem("products"));
-    local = local.sort((a, b) => b.preco - a.preco);
+  static byLowerPrice() {
+    // console.log("low")
+    const array = JSON.parse(localStorage.getItem("products"));
 
-    localStorage.products = JSON.stringify(local);
+    const sortedArray = [...array].sort((a, b) => a.preco - b.preco);
+
+    localStorage.sortedProducts = JSON.stringify(sortedArray);
   }
 }
 
