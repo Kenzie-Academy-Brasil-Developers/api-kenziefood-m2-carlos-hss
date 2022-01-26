@@ -1,8 +1,8 @@
 # PARA FIXAR
 
-- [] Ao digitar um nome no input de busca e depois apagá-lo os itens filtrados são duplicados. Limpar os itens filtrados após apagar o conteúdo.
+- [x] Ao digitar um nome no input de busca e depois apagá-lo os itens filtrados são duplicados. Limpar os itens filtrados após apagar o conteúdo.
 
-- [] Fazer toggle off da classe "empty", no body do carrinho, quando o carrinho possuir itens e fazer o toogle on dela quando estiver vazio.
+- [] Fazer toggle off da classe "empty", no body do carrinho, quando o carrinho possuir itens e fazer o toggle on dela quando estiver vazio.
 
 - [] Quando os elementos são filtradros/pesquisados um novo template para eles é criado e adicionado a section de produtos, mas os event listeners dos botões de adicionar ao carrinho não são adicionados.
 

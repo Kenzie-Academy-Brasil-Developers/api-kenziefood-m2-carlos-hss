@@ -260,7 +260,7 @@ body {
 .cart-body {
   background: var(--grey-1);
   padding: 24.8px 10.78px 10.78px 10.78px;
-  height: 432.84px;
+  height: 325px;
   gap: 46.36px 0;
   overflow-y: scroll;
 }
@@ -335,6 +335,12 @@ body {
   justify-content: space-between;
   align-items: center;
   background: var(--grey-1);
+  height: 58px;
+}
+
+.container-price {
+  justify-content: space-between;
+  align-items: center;
   height: 58px;
 }
 /* END MAIN */
