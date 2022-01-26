@@ -29,15 +29,13 @@ class Filter {
         const input = evt.target.value;
 
         if (input !== '') {
-            const inputLower = `${input[0].toUpperCase()}${input.slice(1)}`
+            const inputLower = `${input[0].toUpperCase()}${input.slice(1).toLowerCase()}`
             const section = document.querySelector(".container-products");
             const array = JSON.parse(localStorage.products);
 
             const filteredArray = array.filter((value) => {
                 return (
-                    value.categoria.includes(input) ||
                     value.categoria.includes(inputLower) ||
-                    value.nome.includes(input) ||
                     value.nome.includes(inputLower) ||
                     value.id === Number(input)
                 );
