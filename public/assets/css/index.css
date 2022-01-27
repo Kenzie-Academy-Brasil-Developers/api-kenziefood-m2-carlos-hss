@@ -488,7 +488,7 @@ body {
     justify-content: space-around;
     margin: 0;
     padding: 0;
-    max-width: 575px;
+    max-width: 760px;
     max-height: fit-content;
   }
 
@@ -556,7 +556,7 @@ body {
 
 @media only screen and (min-width: 1560px) {
   .container-products {
-    max-width: 980px;
+    max-width: 1250px;
   }
 
   .product {
