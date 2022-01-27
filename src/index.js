@@ -4,8 +4,6 @@ import { CreateListProduct } from "./controllers/CreateListProductsController.js
 import { ListProducts } from "./controllers/ListProductsController.js";
 import { ProductRouter } from "./router/router.js";
 
-const products = JSON.parse(localStorage.getItem("products"));
-
 if (JSON.parse(localStorage.getItem("cart")) === null) {
     localStorage.setItem("cart", JSON.stringify([]));
 } else {
@@ -18,6 +16,8 @@ if (JSON.parse(localStorage.getItem("cart")) === null) {
 }
 
 ListProducts.consumeApi();
+
+const products = JSON.parse(localStorage.getItem("products"));
 
 products.forEach((product) => {
     CreateListProduct.createTemplateProduct(product);
