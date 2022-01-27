@@ -1,3 +1,4 @@
+import { Cart } from "./cart.js";
 import { CreateListProduct } from "./CreateListProductsController.js";
 
 class Filter {
@@ -23,14 +24,18 @@ class Filter {
         });
 
         Filter.toggleActive(evt.target);
+        const buttonsCart = document.querySelectorAll(".addcart-button");
+        buttonsCart.forEach((button) => {
+            button.addEventListener("click", Cart.setCartProducts);
+        })
     }
 
     static byInput(evt) {
         const input = evt.target.value;
+        const section = document.querySelector(".container-products");
 
         if (input !== '') {
-            const inputLower = `${input[0].toUpperCase()}${input.slice(1).toLowerCase()}`
-            const section = document.querySelector(".container-products");
+            const inputLower = `${input[0].toUpperCase()}${input.slice(1).toLowerCase()}`;
             const array = JSON.parse(localStorage.products);
 
             const filteredArray = array.filter((value) => {
@@ -48,6 +53,7 @@ class Filter {
             });
         } else {
             const array = JSON.parse(localStorage.getItem("products"));
+            section.innerHTML = "";
             array.forEach((value) => {
                 CreateListProduct.createTemplateProduct(value);
             })
@@ -63,7 +69,10 @@ class Filter {
         array.forEach((value) => {
             CreateListProduct.createTemplateProduct(value);
         })
-
+        const buttonsCart = document.querySelectorAll(".addcart-button");
+        buttonsCart.forEach((button) => {
+            button.addEventListener("click", Cart.setCartProducts);
+        })
         Filter.toggleActive(evt.target);
     }
 
@@ -79,6 +88,10 @@ class Filter {
         });
 
         Filter.toggleActive(evt.target);
+        const buttonsCart = document.querySelectorAll(".addcart-button");
+        buttonsCart.forEach((button) => {
+            button.addEventListener("click", Cart.setCartProducts);
+        })
     }
 
     static byLowerPrice(evt) {
@@ -93,6 +106,10 @@ class Filter {
         });
 
         Filter.toggleActive(evt.target);
+        const buttonsCart = document.querySelectorAll(".addcart-button");
+        buttonsCart.forEach((button) => {
+            button.addEventListener("click", Cart.setCartProducts);
+        })
     }
 }
 

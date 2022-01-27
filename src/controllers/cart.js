@@ -18,10 +18,14 @@ class Cart {
 
     static generateCart() {
         const sectionCart = document.querySelector(".cart-body");
-
+        const lengthCart = JSON.parse(localStorage.cart);
         sectionCart.innerHTML = "";
         for (const i in JSON.parse(localStorage.cart)) {
             Cart.cartModel(i);
+        }
+
+        if (lengthCart.length > 0) {
+            sectionCart.classList.remove("empty");
         }
     }
 
@@ -132,6 +136,7 @@ class Cart {
 
     static removeProducts(evt) {
         const sectionCart = document.querySelector(".cart-body");
+        const lengthCart = JSON.parse(localStorage.cart);
         let local = JSON.parse(localStorage.cart);
         let object = local.find(
             (value) =>
@@ -151,6 +156,9 @@ class Cart {
             sectionCart.innerHTML = "";
             footer.classList.add("hidden");
             Cart.divBag();
+        }
+        if (lengthCart.length <= 1) {
+            sectionCart.classList.add("empty");
         }
     }
 }
