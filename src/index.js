@@ -3,7 +3,7 @@ import { Filter } from "./controllers/filters.js";
 import { CreateListProduct } from "./controllers/CreateListProductsController.js";
 import { ListProducts } from "./controllers/ListProductsController.js";
 
-if (localStorage.getItem("cart") === undefined) {
+if (localStorage.getItem("cart") === null) {
   localStorage.setItem("cart", JSON.stringify([]));
 } else if (
   localStorage.getItem("cart") !== "" &&
