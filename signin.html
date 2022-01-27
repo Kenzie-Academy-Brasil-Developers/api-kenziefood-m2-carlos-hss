@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <!-- FONT AWESOME -->
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- FONT AWESOME -->
+
+    <!-- STYLE SHEETS -->
+    <link rel="stylesheet" href="./public/assets/css/reset.css" />
+    <link rel="stylesheet" href="./public/assets/css/normalize.css" />
+    <link rel="stylesheet" href="./public/assets/css/signin.css" />
+    <!-- STYLE SHEETS -->
+
+    <!-- FONT AWESOME -->
+    <script src="https://kit.fontawesome.com/029de8f342.js" crossorigin="anonymous"></script>
+    <!-- FONT AWESOME -->
+    <title>Login</title>
+</head>
+
+<body>
+    <div class="signin">
+        <div class="container-title">
+            <h2 class="title1">Sign In</h2>
+        </div>
+
+        <form class="form-signin flex-col">
+            <div class="container-user">
+                <label class="label" for="input-user">Usuário</label>
+                <input class="input" type="text" name="user" id="input-user" placeholder="admin" />
+            </div>
+
+            <div class="container-password">
+                <label class="label" for="input-password">Senha</label>
+                <input class="input" type="password" name="password" id="input-password" placeholder="12345678" />
+            </div>
+
+            <div class="container-button">
+                <button class="button-signin" type="button">
+            <span class="fas fa-arrow-alt-circle-right"></span>
+            Entrar
+          </button>
+            </div>
+        </form>
+    </div>
+
+    <script src="./../../../src/signin.js"></script>
+</body>
+
+</html>

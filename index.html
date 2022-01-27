@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <!-- META TAGS -->
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- META TAGS -->
+
+    <!-- FAV ICON -->
+    <link rel="shortcut icon" href="" type="image/x-icon" />
+    <!-- FAV ICON -->
+
+    <!-- STYLE SHEETS -->
+    <link rel="stylesheet" href="./public/assets/css/reset.css" />
+    <link rel="stylesheet" href="./public/assets/css/normalize.css" />
+    <link rel="stylesheet" href="./public/assets/css/index.css" />
+    <!-- STYLE SHEETS -->
+
+    <!-- FONT AWESOME -->
+    <script src="https://kit.fontawesome.com/029de8f342.js" crossorigin="anonymous"></script>
+    <!-- FONT AWESOME -->
+
+    <title>Kenzie Food</title>
+</head>
+
+<body>
+    <header class="header">
+        <div class="container-logo">
+            <figure class="logo-figure">
+                <img class="logo-figure__image" src="./public/assets/img/kenzie-food-logo.svg" alt="Kenzie Food" />
+
+                <figcaption class="logo-figure__figcaption hidden">
+                    Kenzie food logotype
+                </figcaption>
+            </figure>
+        </div>
+
+        <section class="search">
+            <form action="#" class="form-search">
+                <label class="search-label" for="search-product">
+            <input
+              type="text"
+              name="search"
+              class="search-label__input"
+              id="search-product"
+              placeholder="Pesquisar por produto"
+            />
+
+            <button class="search-button" type="button">
+              <img
+                class="search-button__image"
+                src="./public/assets/img/search-icon.svg"
+                alt="Search button"
+              />
+            </button>
+          </label>
+            </form>
+        </section>
+    </header>
+
+    <section class="navigation">
+        <nav>
+            <ul class="navigation-list flex-row">
+                <li>
+                    <button class="button-menu active" type="button">Todos</button>
+                </li>
+
+                <li>
+                    <button class="button-menu panificadora" type="button">
+              <img
+                class="button-menu__image"
+                src="./public/assets/img/panificadora-icon.svg"
+                alt="Bread icon"
+              />
+              Panificadora
+            </button>
+                </li>
+
+                <li>
+                    <button class="button-menu frutas" type="button">
+              <img
+                class="button-menu__image"
+                src="./public/assets/img/frutas-icon.svg"
+                alt="Fruits icon"
+              />
+              Frutas
+            </button>
+                </li>
+
+                <li>
+                    <button class="button-menu drinks" type="button">
+              <img
+                class="button-menu__image"
+                src="./public/assets/img/bebidas-icon.svg"
+                alt="Drinks icon"
+              />
+              Bebidas
+            </button>
+                </li>
+
+                <li>
+                    <button class="button-menu" type="button">
+              <span class="fas fa-dollar-sign button-menu__image"></span>
+              Menor Preço
+            </button>
+                </li>
+
+                <li>
+                    <button class="button-menu" type="button">
+              <span class="fas fa-dollar-sign"></span>
+              <span class="fas fa-dollar-sign"></span>
+              <span class="fas fa-dollar-sign button-menu__image"></span>
+              Maior Preço
+            </button>
+                </li>
+            </ul>
+        </nav>
+    </section>
+
+    <main class="main">
+        <section class="container-products flex-row"></section>
+
+        <div>
+            <aside class="container-cart">
+                <header class="cart-header flex-row">
+                    <img class="cart-header__image" src="./public/assets/img/cart-icon.svg" alt="Cart area" />
+
+                    <h2 class="cart-header__title">Carrinho</h2>
+                </header>
+
+                <section class="cart-body empty flex-col">
+                    <div class="empty-cart flex-col">
+                        <img class="empty-cart_image" src="./public/assets/img/shopping-bag.svg" alt="Shopping bag" />
+
+                        <span class="empty-cart_span">Ops!</span>
+
+                        <p class="empty-cart_paragraph">
+                            Por enquanto não temos produtos no carrinho
+                        </p>
+                    </div>
+                </section>
+
+                <footer class="cart-footer hidden">
+                    <div class="container-quantity flex-row">
+                        <span class="container-quantity__quantity title3">
+                Quantidade
+              </span>
+
+                        <span class="container-quantity__total-quantity title3"> 0 </span>
+                    </div>
+
+                    <div class="container-price flex-row">
+                        <span class="container-price__price title3"> Total </span>
+
+                        <span class="container-price__total-price title3">
+                R$ 85,00
+              </span>
+                    </div>
+                </footer>
+            </aside>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container-button">
+            <a href="./signin.html">
+                <button class="container-button__button">
+            <span class="fas fa-tools"></span>
+          </button>
+            </a>
+        </div>
+    </footer>
+
+    <!-- SCRIPTS -->
+    <script type="module" src="./src/index.js"></script>
+    <!-- SCRIPTS -->
+</body>
+
+</html>
