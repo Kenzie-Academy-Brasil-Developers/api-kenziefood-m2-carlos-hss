@@ -5,36 +5,41 @@ const deleteButton = document.querySelector("#delete-button");
 const modifyButton = document.querySelector("#modify-button");
 const buttonsMenu = Array.from(document.querySelectorAll(".button-menu"));
 
-function setButtonActive(target) {
-  const lastActive = document.querySelector(".active");
+const logo = document.querySelector('#logo')
+logo.addEventListener('click', () => {
+    window.location.assign('./index.html');
+})
 
-  lastActive.classList.toggle("active");
-  target.classList.toggle("active");
+function setButtonActive(target) {
+    const lastActive = document.querySelector(".active");
+
+    lastActive.classList.toggle("active");
+    target.classList.toggle("active");
 }
 
 function changeForm(target) {
-  const containerForm = Array.from(
-    document.querySelectorAll(".container-form")
-  );
-  const formActive = document
-    .querySelector(`.${target.value}`)
-    .closest("section");
+    const containerForm = Array.from(
+        document.querySelectorAll(".container-form")
+    );
+    const formActive = document
+        .querySelector(`.${target.value}`)
+        .closest("section");
 
-  containerForm.forEach((form) => {
-    if (!form.className.includes("hidden")) {
-      form.classList.toggle("hidden");
+    containerForm.forEach((form) => {
+        if (!form.className.includes("hidden")) {
+            form.classList.toggle("hidden");
 
-      formActive.classList.toggle("hidden");
-    }
-  });
+            formActive.classList.toggle("hidden");
+        }
+    });
 }
 
 buttonsMenu.forEach((button) => {
-  button.addEventListener("click", (event) => {
-    setButtonActive(event.target);
+    button.addEventListener("click", (event) => {
+        setButtonActive(event.target);
 
-    changeForm(event.target);
-  });
+        changeForm(event.target);
+    });
 });
 
 registerButton.addEventListener("click", Requisitions.registerProduct);
