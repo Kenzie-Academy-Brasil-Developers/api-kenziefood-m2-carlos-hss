@@ -5,6 +5,7 @@ import { ListProducts } from "./controllers/ListProductsController.js";
 import { ProductRouter } from "./router/router.js";
 
 const products = JSON.parse(localStorage.getItem("products"));
+localStorage.setItem("cart", JSON.stringify([]));
 
 if (JSON.parse(localStorage.getItem("cart")).length >= 1) {
     const sectionCart = document.querySelector(".cart-body");
