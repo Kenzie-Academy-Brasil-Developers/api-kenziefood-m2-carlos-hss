@@ -13,6 +13,7 @@ class Requisitions {
 
     static modifyKey = document.querySelector('#product-patch');
     static modifyInput = document.querySelector('#patch-value');
+    static modifyId = document.querySelector('#identification-product');
 
     static
     registerProduct() {
@@ -40,7 +41,8 @@ class Requisitions {
 
     static
     modifyProduct() {
-        if (Requisitions.modifyInput.value !== '') {
+        if (Requisitions.modifyInput.value !== '' &&
+            Requisitions.modifyId.value !== '') {
             let object;
             if (Requisitions.modifyKey.value === 'nome') {
                 object = { "nome": `${Requisitions.modifyInput.value}` }
@@ -53,8 +55,10 @@ class Requisitions {
             } else if (Requisitions.modifyKey.value === 'descricao') {
                 object = { "descricao": `${Requisitions.modifyInput.value}` }
             };
+            console.log(object)
+            console.log(Requisitions.modifyId.value)
 
-            ProductRouter.patch('idQualquer', object);
+            ProductRouter.patch(Requisitions.modifyId.value, object);
             Requisitions.modifyInput.value = '';
         } else {
             alert('Por favor, preencha o valor que deseja alterar e a identificação do produto.');
@@ -71,10 +75,5 @@ class Requisitions {
         }
     }
 }
-
-//Pão de Batata
-//10
-//Panificadora
-//https://i2.wp.com/panelaterapia.com/wp-content/uploads/2016/02/pao-de-batata.jpg?fit=620%2C407&ssl=1
 
 export { Requisitions };
