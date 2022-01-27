@@ -26,10 +26,11 @@
   <body class="flex-col">
     <header class="header flex-row">
       <div>
-        <span class="fas fa-tools"></span>
+        <img src="./public/assets/img/kenzie-food-logo.svg" alt="" />
       </div>
 
-      <div>
+      <div class="flex-row">
+        <span class="fas fa-tools"></span>
         <h1 class="header__title">Área Administrativa</h1>
       </div>
     </header>
@@ -38,21 +39,25 @@
       <nav>
         <ul class="list flex-row">
           <li class="list-item">
-            <button class="button-menu" type="button">
+            <button
+              value="form-register"
+              class="button-menu active"
+              type="button"
+            >
               <span class="fas fa-sign-in-alt"></span>
               Cadastrar Produto
             </button>
           </li>
 
           <li class="list-item">
-            <button class="button-menu" type="button">
+            <button value="form-patch" class="button-menu" type="button">
               <span class="fas fa-edit"></span>
               Atualizar Produto
             </button>
           </li>
 
           <li class="list-item">
-            <button class="button-menu" type="button">
+            <button value="form-delete" class="button-menu" type="button">
               <span class="fas fa-trash-alt"></span>
               Deletar Produto
             </button>
@@ -62,7 +67,7 @@
     </section>
 
     <main class="main flex-row">
-      <section class="container-form hidden">
+      <section class="container-form">
         <div>
           <h2 class="title1">Cadastrar Produto</h2>
         </div>
@@ -92,13 +97,16 @@
 
           <div class="container-category">
             <label class="label" for="product-category">Categoria</label>
-            <input
+            <select
               class="input"
               type="text"
               name="category"
               id="product-category"
-              placeholder="Panificadora"
-            />
+            >
+              <option value="Panificadora">Panificadora</option>
+              <option value="Frutas">Frutas</option>
+              <option value="Bebidas">Bebidas</option>
+            </select>
           </div>
 
           <div class="container-image">
@@ -131,21 +139,23 @@
         </form>
       </section>
 
-      <section class="container-form">
+      <section class="container-form hidden">
         <div>
           <h2 class="title1">Atualizar Produto</h2>
         </div>
 
-        <form class="form-patch">
+        <form class="form-patch flex-col">
           <div>
             <label class="label" for="identification-product"
               >Identificação</label
             >
+
             <input
               class="input"
               type="text"
               name="identification"
               id="identification-product"
+              placeholder="1"
             />
           </div>
 
@@ -166,6 +176,7 @@
               class="input-textarea"
               name="value"
               id="patch-value"
+              placeholder="Pão de queijo"
             ></textarea>
           </div>
 
@@ -183,10 +194,16 @@
           <h2 class="title1">Deletar Produto</h2>
         </div>
 
-        <form class="form-delete">
+        <form class="form-delete flex-col">
           <div class="container-identification">
             <label class="label" for="id-product">Identificação</label>
-            <input class="input" type="text" name="id" id="id-product" />
+            <input
+              class="input"
+              type="text"
+              name="id"
+              id="id-product"
+              placeholder="2"
+            />
           </div>
 
           <div class="container-button">
