@@ -8,7 +8,7 @@
     <!-- META TAGS -->
 
     <!-- STYLE SHEETS -->
-    <!-- <link rel="stylesheet" href="./public/assets/css/reset.css" /> -->
+    <link rel="stylesheet" href="./public/assets/css/reset.css" />
     <link rel="stylesheet" href="./public/assets/css/normalize.css" />
     <link rel="stylesheet" href="./public/assets/css/admin.css" />
     <!-- STYLE SHEETS -->
@@ -23,52 +23,103 @@
     <title>Administração</title>
   </head>
 
-  <body>
-    <header>
+  <body class="flex-col">
+    <header class="header flex-row">
       <div>
         <span class="fas fa-tools"></span>
       </div>
 
       <div>
-        <h1>Área Administrativa</h1>
+        <h1 class="header__title">Área Administrativa</h1>
       </div>
     </header>
 
-    <main>
-      <section class="container-register">
+    <section class="navigation">
+      <nav>
+        <ul class="list flex-row">
+          <li class="list-item">
+            <button class="button-menu" type="button">
+              <span class="fas fa-sign-in-alt"></span>
+              Cadastrar Produto
+            </button>
+          </li>
+
+          <li class="list-item">
+            <button class="button-menu" type="button">
+              <span class="fas fa-edit"></span>
+              Atualizar Produto
+            </button>
+          </li>
+
+          <li class="list-item">
+            <button class="button-menu" type="button">
+              <span class="fas fa-trash-alt"></span>
+              Deletar Produto
+            </button>
+          </li>
+        </ul>
+      </nav>
+    </section>
+
+    <main class="main flex-row">
+      <section class="container-form">
         <div>
-          <h2>Cadastrar Produto</h2>
+          <h2 class="title1">Cadastrar Produto</h2>
         </div>
 
-        <form class="form-register">
+        <form class="form-register flex-col">
           <div class="container-name">
-            <label for="product-name">Nome</label>
-            <input class="input" type="text" name="name" id="product-name" />
+            <label class="label" for="product-name">Nome</label>
+            <input
+              class="input"
+              type="text"
+              name="name"
+              id="product-name"
+              placeholder="Torta de limão"
+            />
           </div>
 
           <div class="container-price">
-            <label for="product-price">Preço</label>
-            <input class="input" type="text" name="price" id="product-price" />
+            <label class="label" for="product-price">Preço</label>
+            <input
+              class="input"
+              type="text"
+              name="price"
+              id="product-price"
+              placeholder="8.75"
+            />
           </div>
 
           <div class="container-category">
-            <label for="product-category">Categoria</label>
+            <label class="label" for="product-category">Categoria</label>
             <input
               class="input"
               type="text"
               name="category"
               id="product-category"
+              placeholder="Panificadora"
             />
           </div>
 
           <div class="container-image">
-            <label for="product-image">Imagem</label>
-            <input class="input" type="text" name="image" id="product-image" />
+            <label class="label" for="product-image">Imagem</label>
+            <input
+              class="input"
+              type="text"
+              name="image"
+              id="product-image"
+              placeholder="https://cdn.pixabay.com/pho ..."
+            />
           </div>
 
           <div class="container-description">
-            <label for="product-description">Descrição</label>
-            <textarea name="description" id="product-description"> </textarea>
+            <label class="label" for="product-description">Descrição</label>
+            <textarea
+              class="input-textarea"
+              name="description"
+              id="product-description"
+              placeholder="A torta de limão é uma sobremesa muito amada por todo mundo! Por ser bem equilibrada, a torta de limão é um doce perfeito para quem ..."
+            ></textarea>
           </div>
 
           <div class="container-button">
@@ -80,14 +131,26 @@
         </form>
       </section>
 
-      <section>
+      <section class="container-form hidden">
         <div>
-          <h2>Atualizar Produto</h2>
+          <h2 class="title1">Atualizar Produto</h2>
         </div>
 
         <form class="form-patch">
+          <div>
+            <label class="label" for="identification-product"
+              >Identificação</label
+            >
+            <input
+              class="input"
+              type="text"
+              name="identification"
+              id="identification-product"
+            />
+          </div>
+
           <div class="container-options">
-            <label for="product-patch">Selecione a propriedade</label>
+            <label class="label" for="product-patch">Propriedade</label>
             <select class="input" name="patch" id="product-patch">
               <option value="name">Nome</option>
               <option value="price">Preco</option>
@@ -98,7 +161,12 @@
           </div>
 
           <div class="container-value">
-            <textarea name="value" id="patch-value"></textarea>
+            <label class="label" for="patch-value">Valor</label>
+            <textarea
+              class="input-textarea"
+              name="value"
+              id="patch-value"
+            ></textarea>
           </div>
 
           <div class="container-button">
@@ -110,14 +178,14 @@
         </form>
       </section>
 
-      <section>
+      <section class="container-form hidden">
         <div>
-          <h2>Deletar Produto</h2>
+          <h2 class="title1">Deletar Produto</h2>
         </div>
 
         <form class="form-delete">
           <div class="container-identification">
-            <label for="id-product">Identificação</label>
+            <label class="label" for="id-product">Identificação</label>
             <input class="input" type="text" name="id" id="id-product" />
           </div>
 
