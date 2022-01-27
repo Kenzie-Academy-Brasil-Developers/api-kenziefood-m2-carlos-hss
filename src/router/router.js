@@ -24,9 +24,9 @@ class ProductRouter {
     }
 
     static
-    async patch(object) {
+    async patch(id, object) {
 
-        const response = await fetch(`${this.urlAPI}/:`, {
+        const response = await fetch(`${this.urlAPI}/:${id}`, {
             method: "patch",
             headers: {
                 "Content-Type": "application/json",
@@ -41,7 +41,7 @@ class ProductRouter {
     static
     async delete(id) {
 
-        const response = await fetch(`${this.urlAPI}/:${id}`, {
+        const response = await fetch(`${this.urlAPI}/${id}`, {
             method: "delete",
             headers: {
                 "Content-Type": "application/json",
