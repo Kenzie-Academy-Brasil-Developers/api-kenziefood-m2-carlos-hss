@@ -1,12 +1,19 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
-<head>
+  <head>
     <!-- META TAGS -->
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- META TAGS -->
+
+    <!-- FAV ICON -->
+    <link
+      rel="shortcut icon"
+      href="./public/assets/img/icon.svg"
+      type="image/x-icon"
+    />
+    <!-- FAV ICON -->
 
     <!-- STYLE SHEETS -->
     <link rel="stylesheet" href="./public/assets/css/reset.css" />
@@ -15,157 +22,210 @@
     <!-- STYLE SHEETS -->
 
     <!-- FONT AWESOME -->
-    <script src="https://kit.fontawesome.com/029de8f342.js" crossorigin="anonymous"></script>
+    <script
+      src="https://kit.fontawesome.com/029de8f342.js"
+      crossorigin="anonymous"
+    ></script>
     <!-- FONT AWESOME -->
 
     <title>Administração</title>
-</head>
+  </head>
 
-<body class="flex-col">
+  <body class="flex-col">
     <header class="header flex-row">
-        <div id="logo">
-            <img src="./public/assets/img/kenzie-food-logo.svg" alt="" />
-        </div>
+      <div id="logo">
+        <img src="./public/assets/img/kenzie-food-logo.svg" alt="" />
+      </div>
 
-        <div class="flex-row">
-            <span class="fas fa-tools"></span>
-            <h1 class="header__title">Área Administrativa</h1>
-        </div>
+      <div class="flex-row">
+        <span class="fas fa-tools"></span>
+        <h1 class="header__title">Área Administrativa</h1>
+      </div>
     </header>
 
     <section class="navigation">
-        <nav>
-            <ul class="list flex-row">
-                <li class="list-item">
-                    <button value="form-register" class="button-menu active" type="button">
-                        <span class="fas fa-sign-in-alt"></span>
-                        Cadastrar Produto
-                    </button>
-                </li>
+      <nav>
+        <ul class="list flex-row">
+          <li class="list-item">
+            <button
+              value="form-register"
+              class="button-menu active"
+              type="button"
+            >
+              <span class="fas fa-sign-in-alt"></span>
+              Cadastrar Produto
+            </button>
+          </li>
 
-                <li class="list-item">
-                    <button value="form-patch" class="button-menu" type="button">
-                        <span class="fas fa-edit"></span>
-                        Atualizar Produto
-                    </button>
-                </li>
+          <li class="list-item">
+            <button value="form-patch" class="button-menu" type="button">
+              <span class="fas fa-edit"></span>
+              Atualizar Produto
+            </button>
+          </li>
 
-                <li class="list-item">
-                    <button value="form-delete" class="button-menu" type="button">
-                        <span class="fas fa-trash-alt"></span>
-                        Deletar Produto
-                    </button>
-                </li>
-            </ul>
-        </nav>
+          <li class="list-item">
+            <button value="form-delete" class="button-menu" type="button">
+              <span class="fas fa-trash-alt"></span>
+              Deletar Produto
+            </button>
+          </li>
+        </ul>
+      </nav>
     </section>
 
     <main class="main flex-row">
-        <section class="container-form">
-            <div>
-                <h2 class="title1">Cadastrar Produto</h2>
-            </div>
+      <section class="container-form">
+        <div>
+          <h2 class="title1">Cadastrar Produto</h2>
+        </div>
 
-            <form class="form-register flex-col">
-                <div class="container-name">
-                    <label class="label" for="product-name">Nome</label>
-                    <input class="input" type="text" name="name" id="product-name" placeholder="Torta de limão" />
-                </div>
+        <form class="form-register flex-col">
+          <div class="container-name">
+            <label class="label" for="product-name">Nome</label>
+            <input
+              class="input"
+              type="text"
+              name="name"
+              id="product-name"
+              placeholder="Torta de limão"
+            />
+          </div>
 
-                <div class="container-price">
-                    <label class="label" for="product-price">Preço</label>
-                    <input class="input" type="text" name="price" id="product-price" placeholder="8.75" />
-                </div>
+          <div class="container-price">
+            <label class="label" for="product-price">Preço</label>
+            <input
+              class="input"
+              type="text"
+              name="price"
+              id="product-price"
+              placeholder="8.75"
+            />
+          </div>
 
-                <div class="container-category">
-                    <label class="label" for="product-category">Categoria</label>
-                    <select class="input" type="text" name="category" id="product-category">
-                        <option value="Panificadora">Panificadora</option>
-                        <option value="Frutas">Frutas</option>
-                        <option value="Bebidas">Bebidas</option>
-                    </select>
-                </div>
+          <div class="container-category">
+            <label class="label" for="product-category">Categoria</label>
+            <select
+              class="input"
+              type="text"
+              name="category"
+              id="product-category"
+            >
+              <option value="Panificadora">Panificadora</option>
+              <option value="Frutas">Frutas</option>
+              <option value="Bebidas">Bebidas</option>
+            </select>
+          </div>
 
-                <div class="container-image">
-                    <label class="label" for="product-image">Imagem</label>
-                    <input class="input" type="text" name="image" id="product-image" placeholder="https://cdn.pixabay.com/pho ..." />
-                </div>
+          <div class="container-image">
+            <label class="label" for="product-image">Imagem</label>
+            <input
+              class="input"
+              type="text"
+              name="image"
+              id="product-image"
+              placeholder="https://cdn.pixabay.com/pho ..."
+            />
+          </div>
 
-                <div class="container-description">
-                    <label class="label" for="product-description">Descrição</label>
-                    <textarea class="input-textarea" name="description" id="product-description" placeholder="A torta de limão é uma sobremesa muito amada por todo mundo! Por ser bem equilibrada, a torta de limão é um doce perfeito para quem ..."></textarea>
-                </div>
+          <div class="container-description">
+            <label class="label" for="product-description">Descrição</label>
+            <textarea
+              class="input-textarea"
+              name="description"
+              id="product-description"
+              placeholder="A torta de limão é uma sobremesa muito amada por todo mundo! Por ser bem equilibrada, a torta de limão é um doce perfeito para quem ..."
+            ></textarea>
+          </div>
 
-                <div class="container-button">
-                    <button class="button-send" type="button" id="register-button">
-                        <span class="fas fa-paper-plane"></span>
-                        Enviar
-                    </button>
-                </div>
-            </form>
-        </section>
+          <div class="container-button">
+            <button class="button-send" type="button" id="register-button">
+              <span class="fas fa-paper-plane"></span>
+              Enviar
+            </button>
+          </div>
+        </form>
+      </section>
 
-        <section class="container-form hidden">
-            <div>
-                <h2 class="title1">Atualizar Produto</h2>
-            </div>
+      <section class="container-form hidden">
+        <div>
+          <h2 class="title1">Atualizar Produto</h2>
+        </div>
 
-            <form class="form-patch flex-col">
-                <div>
-                    <label class="label" for="identification-product">Identificação</label>
+        <form class="form-patch flex-col">
+          <div>
+            <label class="label" for="identification-product"
+              >Identificação</label
+            >
 
-                    <input class="input" type="text" name="identification" id="identification-product" placeholder="1" />
-                </div>
+            <input
+              class="input"
+              type="text"
+              name="identification"
+              id="identification-product"
+              placeholder="1"
+            />
+          </div>
 
-                <div class="container-options">
-                    <label class="label" for="product-patch">Propriedade</label>
-                    <select class="input" name="patch" id="product-patch">
-                        <option value="nome">Nome</option>
-                        <option value="preco">Preço</option>
-                        <option value="categoria">Categoria</option>
-                        <option value="imagem">Imagem</option>
-                        <option value="descricao">Descrição</option>
-                    </select>
-                </div>
+          <div class="container-options">
+            <label class="label" for="product-patch">Propriedade</label>
+            <select class="input" name="patch" id="product-patch">
+              <option value="nome">Nome</option>
+              <option value="preco">Preço</option>
+              <option value="categoria">Categoria</option>
+              <option value="imagem">Imagem</option>
+              <option value="descricao">Descrição</option>
+            </select>
+          </div>
 
-                <div class="container-value">
-                    <label class="label" for="patch-value">Valor</label>
-                    <textarea class="input-textarea" name="value" id="patch-value" placeholder="Pão de queijo"></textarea>
-                </div>
+          <div class="container-value">
+            <label class="label" for="patch-value">Valor</label>
+            <textarea
+              class="input-textarea"
+              name="value"
+              id="patch-value"
+              placeholder="Pão de queijo"
+            ></textarea>
+          </div>
 
-                <div class="container-button">
-                    <button class="button-send" type="button" id="modify-button">
-                        <span class="fas fa-paper-plane"></span>
-                        Enviar
-                    </button>
-                </div>
-            </form>
-        </section>
+          <div class="container-button">
+            <button class="button-send" type="button" id="modify-button">
+              <span class="fas fa-paper-plane"></span>
+              Enviar
+            </button>
+          </div>
+        </form>
+      </section>
 
-        <section class="container-form hidden">
-            <div>
-                <h2 class="title1">Deletar Produto</h2>
-            </div>
+      <section class="container-form hidden">
+        <div>
+          <h2 class="title1">Deletar Produto</h2>
+        </div>
 
-            <form class="form-delete flex-col">
-                <div class="container-identification">
-                    <label class="label" for="id-product">Identificação</label>
-                    <input class="input" type="text" name="id" id="id-product" placeholder="2" />
-                </div>
+        <form class="form-delete flex-col">
+          <div class="container-identification">
+            <label class="label" for="id-product">Identificação</label>
+            <input
+              class="input"
+              type="text"
+              name="id"
+              id="id-product"
+              placeholder="2"
+            />
+          </div>
 
-                <div class="container-button">
-                    <button class="button-send" type="button" id="delete-button">
-                        <span class="fas fa-paper-plane"></span>
-                        Enviar
-                    </button>
-                </div>
-            </form>
-        </section>
+          <div class="container-button">
+            <button class="button-send" type="button" id="delete-button">
+              <span class="fas fa-paper-plane"></span>
+              Enviar
+            </button>
+          </div>
+        </form>
+      </section>
     </main>
 
     <footer></footer>
 
     <script type="module" src="./src/admin.js"></script>
-</body>
-
+  </body>
 </html>
