@@ -1,11 +1,8 @@
 /* START IMPORTS */
-
 @import url(./root-variables.css);
-
 /* END IMPORTS */
 
 /* START GENERAL */
-
 .flex-row {
   display: flex;
   flex-flow: row wrap;
@@ -346,16 +343,13 @@ body {
 /* END MAIN */
 
 /* START FOOTER */
-
 .footer {
 }
-
 /* END FOOTER */
 
 /* START EXTRAS */
 
 /* Hide scrollbar for Chrome, Safari and Opera */
-
 .navigation-list::-webkit-scrollbar {
   display: none;
 }
@@ -369,7 +363,6 @@ body {
 }
 
 /* Hide scrollbar for IE, Edge and Firefox */
-
 .navigation-list {
   -ms-overflow-style: none;
   /* IE and Edge */
@@ -390,11 +383,9 @@ body {
   scrollbar-width: none;
   /* Firefox */
 }
-
 /* END EXTRAS */
 
 /* START MEDIA QUERIES */
-
 @media only screen and (min-width: 768px) {
   /* START NAVIGATION */
   .navigation-list {
