@@ -6,15 +6,15 @@ import { ProductRouter } from "./router/router.js";
 
 const products = JSON.parse(localStorage.getItem("products"));
 
-if (JSON.parse(localStorage.getItem("cart")).length >= 1) {
+if (JSON.parse(localStorage.getItem("cart")) === null) {
+    localStorage.setItem("cart", JSON.stringify([]));
+} else {
     const sectionCart = document.querySelector(".cart-body");
     sectionCart.innerHTML = "";
     Cart.footerValues();
     for (const i in JSON.parse(localStorage.cart)) {
         Cart.cartModel(i);
     }
-} else {
-    localStorage.setItem("cart", JSON.stringify([]));
 }
 
 ListProducts.consumeApi();
