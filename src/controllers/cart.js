@@ -67,7 +67,7 @@ class Cart {
     spanBag.className = "empty-cart_span";
     pBag.className = "empty-cart_paragraph";
 
-    imgBag.src = "./../../../public/assets/img/shopping-bag.svg";
+    imgBag.src = "../../../public/assets/img/shopping-bag.svg";
     spanBag.innerText = "Ops!";
     pBag.innerText = "Por enquanto não temos produtos no carrinho";
 
@@ -118,7 +118,7 @@ class Cart {
     nameH2.innerText = savedCart[i].name;
     category.innerText = savedCart[i].category;
     price.innerText = savedCart[i].price;
-    imgRemove.src = "./../../../public/assets/img/remove-product-icon.svg";
+    imgRemove.src = "../../../public/assets/img/remove-product-icon.svg";
 
     buttonRemove.addEventListener("click", Cart.removeProducts);
 
