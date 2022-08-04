@@ -348,8 +348,8 @@ body {
   position: sticky;
   bottom: 0;
   z-index: 1;
-  background: var(--white);
-  padding: 23px 17px 25px 17px;
+  background: transparent;
+  pointer-events: none;
 }
 
 .container-button__button {
@@ -357,6 +357,7 @@ body {
   border: none;
   border-radius: 50%;
   padding: 20px;
+  pointer-events: all;
 }
 
 .fa-tools {
@@ -530,7 +531,7 @@ body {
 
   /* START FOOTER */
   .footer {
-    padding: 10px 116px 15px 116px;
+    padding: 20px 30px;
   }
 
   .container-button__button {
