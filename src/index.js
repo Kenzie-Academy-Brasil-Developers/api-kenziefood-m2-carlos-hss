@@ -19,7 +19,7 @@ if (localStorage.getItem("cart") === null) {
 ListProducts.consumeApi();
 
 const products = JSON.parse(localStorage.getItem("products"));
-
+console.log(products);
 products.forEach((product) => {
   CreateListProduct.createTemplateProduct(product);
 });
